@@ -1,5 +1,5 @@
 <H1> Diplom in Laravel</H1>
-    -   Установить проект 
+- Установить проект 
     -   Настроить .env file
     -   Выполнить комманду для миграции: php artisan migrate
     -   Выполнить команду php artisan seed 
