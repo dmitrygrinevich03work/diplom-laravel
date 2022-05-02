@@ -1,4 +1,9 @@
 <H1> Laravel Diplom </H1>
+    - <H3> 1. Установить проект </H3>
+    - <H3> 2. Настроить .env file  </H3>
+    - <H3> 3. Выполнить комманду для миграции: php artisan migrate </H3>
+    - <H3> 4. Выполнить команду php artisan seed </H3>
+    - <H3> 5. Проект готов к использовании! </H3>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
