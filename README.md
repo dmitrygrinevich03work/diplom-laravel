@@ -1,6 +1,8 @@
 <H1> Diplom in Laravel</H1>
    <p>- Установить проект </p>
    <p> -   Настроить .env file </p>
+   <p> -   Выполнить комманду: npm run dev </p>
+   <p> -   Выполнить комманду: npm run prod </p>
    <p> -   Выполнить комманду для миграции: php artisan migrate </p>
    <p> -   Выполнить команду php artisan seed </p>
    <p> -   Проект готов к использовании! </p>
