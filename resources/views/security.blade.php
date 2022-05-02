@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    <title>Безопаность</title>
+    <title>Security</title>
 @endsection
 
 @section('style')
@@ -17,7 +17,7 @@
     <main id="js-page-content" role="main" class="page-content mt-3">
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-lock'></i> Безопасность
+                <i class='subheader-icon fal fa-lock'></i> Security
             </h1>
 
         </div>
@@ -35,7 +35,7 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Обновление эл. адреса и пароля</h2>
+                                <h2>Email update address and password</h2>
                             </div>
                             <div class="panel-content">
                                 <!-- email -->
@@ -46,19 +46,12 @@
 
                                 <!-- password -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Пароль</label>
+                                    <label class="form-label" for="simpleinput">Password</label>
                                     <input type="password" id="simpleinput" name="password" class="form-control">
                                 </div>
 
-{{--                                <!-- password confirmation-->--}}
-{{--                                <div class="form-group">--}}
-{{--                                    <label class="form-label" for="simpleinput">Подтверждение пароля</label>--}}
-{{--                                    <input type="password" id="simpleinput" class="form-control">--}}
-{{--                                </div>--}}
-
-
                                 <div class="col-md-12 mt-3 d-flex flex-row-reverse">
-                                    <button class="btn btn-warning">Изменить</button>
+                                    <button class="btn btn-warning">Change</button>
                                 </div>
                             </div>
                         </div>

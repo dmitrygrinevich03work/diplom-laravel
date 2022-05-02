@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    <title>Главная</title>
+    <title>Home</title>
 @endsection
 @section('style')
     <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="/css/vendors.bundle.css">
@@ -22,13 +22,13 @@
         @endif
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-users'></i> Список пользователей
+                <i class='subheader-icon fal fa-users'></i> A list of users
             </h1>
         </div>
         @if(auth()->user()->roles_mask == 1)
             <div class="row">
                 <div class="col-xl-12">
-                    <a class="btn btn-success" href="{{ route('create.user') }}">Добавить</a>
+                    <a class="btn btn-success" href="{{ route('create.user') }}">Add</a>
 
                     <div class="border-faded bg-faded p-3 mb-g d-flex mt-3">
                         <input type="text" id="js-filter-contacts" name="filter-contacts"
@@ -67,21 +67,21 @@
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="/edit/{{$user->id}}">
                                             <i class="fa fa-edit"></i>
-                                            Редактировать</a>
+                                            Edit</a>
                                         <a class="dropdown-item" href="/security/{{$user->id}}">
                                             <i class="fa fa-lock"></i>
-                                            Безопасность</a>
+                                            Security</a>
                                         <a class="dropdown-item" href="/status/{{$user->id}}">
                                             <i class="fa fa-sun"></i>
-                                            Установить статус</a>
+                                            Set status</a>
                                         <a class="dropdown-item" href="/avatar/{{$user->id}}">
                                             <i class="fa fa-camera"></i>
-                                            Загрузить аватар
+                                            Upload avatar
                                         </a>
                                         <a href="/delete_user/{{$user->id}}" class="dropdown-item"
                                            onclick="return confirm('are you sure?');">
                                             <i class="fa fa-window-close"></i>
-                                            Удалить
+                                            Delete
                                         </a>
                                     </div>
                                     <span class="text-truncate text-truncate-xl">{{$user->work}}</span>
@@ -125,7 +125,7 @@
     <!-- BEGIN Page Footer -->
     <footer class="page-footer" role="contentinfo">
         <div class="d-flex align-items-center flex-1 text-muted">
-            <span class="hidden-md-down fw-700">2020 © Учебный проект</span>
+            <span class="hidden-md-down fw-700">2020 © Educational project</span>
         </div>
     </footer>
 

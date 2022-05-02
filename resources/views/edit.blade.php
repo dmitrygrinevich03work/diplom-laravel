@@ -17,7 +17,7 @@
     <main id="js-page-content" role="main" class="page-content mt-3">
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-plus-circle'></i> Редактировать
+                <i class='subheader-icon fal fa-plus-circle'></i> Edit
             </h1>
 
         </div>
@@ -28,34 +28,34 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Общая информация</h2>
+                                <h2>General information</h2>
                             </div>
                             <div class="panel-content">
                                 <!-- username -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Имя</label>
+                                    <label class="form-label" for="simpleinput">Name</label>
                                     <input type="text" id="simpleinput" name="name" class="form-control" value="{{$user->name}}">
                                 </div>
 
                                 <!-- title -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Место работы</label>
+                                    <label class="form-label" for="simpleinput">Place of work</label>
                                     <input type="text" id="simpleinput" name="work" class="form-control" value="{{$user->work}}">
                                 </div>
 
                                 <!-- tel -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Номер телефона</label>
+                                    <label class="form-label" for="simpleinput">Phone number</label>
                                     <input type="text" id="simpleinput" name="phone" class="form-control" value="{{$user->phone}}">
                                 </div>
 
                                 <!-- address -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Адрес</label>
+                                    <label class="form-label" for="simpleinput">The address</label>
                                     <input type="text" id="simpleinput" name="address" class="form-control" value="{{$user->address}}">
                                 </div>
                                 <div class="col-md-12 mt-3 d-flex flex-row-reverse">
-                                    <button class="btn btn-warning">Редактировать</button>
+                                    <button class="btn btn-warning">Edit</button>
                                 </div>
                             </div>
                         </div>

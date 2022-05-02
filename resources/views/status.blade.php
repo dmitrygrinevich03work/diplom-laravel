@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    <title>Статус</title>
+    <title>Status</title>
 @endsection
 
 @section('style')
@@ -17,7 +17,7 @@
     <main id="js-page-content" role="main" class="page-content mt-3">
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-sun'></i> Установить статус
+                <i class='subheader-icon fal fa-sun'></i> Set status
             </h1>
 
         </div>
@@ -28,14 +28,14 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Установка текущего статуса</h2>
+                                <h2>Setting the current status</h2>
                             </div>
                             <div class="panel-content">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <!-- status -->
                                         <div class="form-group">
-                                            <label class="form-label" for="example-select">Выберите статус</label>
+                                            <label class="form-label" for="example-select">Select status</label>
                                             <select class="form-control" id="example-select" name="select_status">
                                                 @foreach($select_status as $value_status)
                                                     @if($value_status->id == $user->status_online)

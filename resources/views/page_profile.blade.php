@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    <title>Профиль пользователя</title>
+    <title>User Profile</title>
 @endsection
 
 @section('style')

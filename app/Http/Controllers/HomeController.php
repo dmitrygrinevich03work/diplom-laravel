@@ -62,7 +62,7 @@ class HomeController extends Controller
                 $filename = $this->request->image->store('uploads');
                 DB::table('users')->where('id', $user->id)->update(['image' => $filename]);
             }
-            return redirect()->route('home')->with('status', 'Ви успішно зареєстрували користувача!');
+            return redirect()->route('home')->with('status', 'You have successfully registered a user!');
         }
         return redirect()->route('login');
     }
@@ -78,7 +78,7 @@ class HomeController extends Controller
             if ($this->isUser($id)) {
                 return view('media', ['user' => $select_user]);
             }
-            return redirect()->route('home')->with('status', 'Можна редагувати тільки свій профіль!');
+            return redirect()->route('home')->with('status', 'You can only edit your profile!');
         }
         return redirect()->route('login');
 
@@ -96,7 +96,7 @@ class HomeController extends Controller
         $filename = $this->request->image->store('uploads');
 
         DB::table('users')->where('id', $id)->update(['image' => $filename]);
-        return redirect()->route('profile')->with('status', 'Фото успішно оновлено!');
+        return redirect()->route('profile')->with('status', 'Photo successfully updated!');
     }
 
     public function pageRegister()
@@ -145,7 +145,7 @@ class HomeController extends Controller
                     return view('edit', ['user' => $user]);
                 }
             }
-            return redirect()->route('home')->with('status', 'Можна редагувати тільки свій профіль!');
+            return redirect()->route('home')->with('status', 'You can only edit your profile!');
         }
         return redirect()->route('login');
     }
@@ -155,7 +155,7 @@ class HomeController extends Controller
         DB::table('users')
             ->where('id', $id)
             ->update(['name' => $this->request->name, 'work' => $this->request->work, 'phone' => $this->request->phone, 'address' => $this->request->address]);
-        return redirect()->route('profile')->with('status', 'Ви успішно оновили данні профіля!');
+        return redirect()->route('profile')->with('status', 'You have successfully updated your profile information!');
     }
 
     public function pageSecurity($id)
@@ -175,7 +175,7 @@ class HomeController extends Controller
                     return view('security', ['user' => $user]);
                 }
             }
-            return redirect()->route('home')->with('status', 'Ви можете редагувати тільки свій профіль!');
+            return redirect()->route('home')->with('status', 'You can only edit your profile!');
         }
         return redirect()->route('login');
     }
@@ -195,7 +195,7 @@ class HomeController extends Controller
             ]);
             $this->securityUpdateEmailPassword($id);
         }
-        return redirect()->route('profile')->with('status', 'Ви успішно оновили профіль!');
+        return redirect()->route('profile')->with('status', 'You have successfully updated your profile!');
     }
 
     public function pageStatus($id)
@@ -210,7 +210,7 @@ class HomeController extends Controller
             if ($this->isUser($id)) {
                 return view('status', ['user' => $user_data, 'select_status' => $select_status_online]);
             } else {
-                return redirect()->route('home')->with('status', 'Ви можете редагувати тільки свій профіль!');
+                return redirect()->route('home')->with('status', 'You can only edit your profile!');
             }
         }
         return redirect()->route('login');
@@ -219,7 +219,7 @@ class HomeController extends Controller
     public function updateStatusHandler($id)
     {
         DB::table('users')->where('id', $id)->update(['status_online' => $this->request->select_status]);
-        return redirect()->route('profile')->with('status', 'Ви успішно оновили свій профіль!');
+        return redirect()->route('profile')->with('status', 'You have successfully updated your profile!');
     }
 
     public function deleteUser($id)
@@ -228,25 +228,25 @@ class HomeController extends Controller
 
         if (Auth::check()) {
             if ($this->isAdmin()) {
-                Storage::delete($select_user->image);//Удаляю аватарку с диска
-                $this->delete_user_by_id($id);//Видаляю користувача
-                if (Auth::user()->id == $id) {//Если админ удалил себя то выходим с системы
+                Storage::delete($select_user->image);
+                $this->delete_user_by_id($id);
+                if (Auth::user()->id == $id) {
                     Auth::logout();
                     $this->request->session()->invalidate();
                     $this->request->session()->regenerateToken();
                     die();
                 }
-                return redirect()->route('home')->with('status', 'Користувач видаленний!');
+                return redirect()->route('home')->with('status', 'User deleted!');
             }
             //User
             if ($this->isUser($id)) {
-                Storage::delete($select_user->image);//Удаляю аватарку с диска
-                $this->delete_user_by_id($id);//Видаляю користувача
+                Storage::delete($select_user->image);
+                $this->delete_user_by_id($id);
                 Auth::logout();
                 $this->request->session()->invalidate();
                 $this->request->session()->regenerateToken();
             }
-            return redirect()->route('home')->with('status', 'Можна редагувати тільки свій профіль!');
+            return redirect()->route('home')->with('status', 'You can only edit your profile!');
         }
         return redirect()->route('login');
     }

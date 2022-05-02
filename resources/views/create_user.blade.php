@@ -18,7 +18,7 @@
     <main id="js-page-content" role="main" class="page-content mt-3">
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-plus-circle'></i> Добавить пользователя
+                <i class='subheader-icon fal fa-plus-circle'></i> Add user
             </h1>
 
 
@@ -37,30 +37,30 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Общая информация</h2>
+                                <h2>General information</h2>
                             </div>
                             <div class="panel-content">
                                 <!-- username -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Имя</label>
+                                    <label class="form-label" for="simpleinput">Name</label>
                                     <input type="text" id="simpleinput" name="name" class="form-control">
                                 </div>
 
                                 <!-- title -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Место работы</label>
+                                    <label class="form-label" for="simpleinput">Place of work</label>
                                     <input type="text" id="simpleinput" name="work" class="form-control">
                                 </div>
 
                                 <!-- tel -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Номер телефона</label>
+                                    <label class="form-label" for="simpleinput">Phone number</label>
                                     <input type="text" id="simpleinput" name="phone" class="form-control">
                                 </div>
 
                                 <!-- address -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Адрес</label>
+                                    <label class="form-label" for="simpleinput">The address</label>
                                     <input type="text" id="simpleinput" name="address" class="form-control">
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Безопасность и Медиа</h2>
+                                <h2>Security and Media</h2>
                             </div>
                             <div class="panel-content">
                                 <!-- email -->
@@ -83,14 +83,14 @@
 
                                 <!-- password -->
                                 <div class="form-group">
-                                    <label class="form-label" for="simpleinput">Пароль</label>
+                                    <label class="form-label" for="simpleinput">Password</label>
                                     <input type="password" id="simpleinput" name="password" class="form-control">
                                 </div>
 
 
                                 <!-- status -->
                                 <div class="form-group">
-                                    <label class="form-label" for="example-select">Выберите статус</label>
+                                    <label class="form-label" for="example-select">Select status</label>
                                     <select class="form-control" id="example-select" name="select_status">
                                         @foreach($select_status as $value_status)
                                         <option value="{{$value_status->id}}"
@@ -100,7 +100,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label" for="example-fileinput">Выберите аватар</label>
+                                    <label class="form-label" for="example-fileinput">Choose an avatar</label>
                                     <input type="file" id="example-fileinput" name="image" class="form-control-file">
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                     <div id="panel-1" class="panel">
                         <div class="panel-container">
                             <div class="panel-hdr">
-                                <h2>Социальные сети</h2>
+                                <h2>Social media</h2>
                             </div>
                             <div class="panel-content">
                                 <div class="row">
@@ -160,7 +160,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12 mt-3 d-flex flex-row-reverse">
-                                        <button class="btn btn-success">Добавить</button>
+                                        <button class="btn btn-success">Add</button>
                                     </div>
                                 </div>
                             </div>
