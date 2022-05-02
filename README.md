@@ -1,4 +1,4 @@
-<H1> Laravel Diplom </H1>
+<H1> Diplom in Laravel</H1>
     -   Установить проект 
     -   Настроить .env file
     -   Выполнить комманду для миграции: php artisan migrate
